@@ -1,20 +1,13 @@
 const mongoose = require('mongoose');
 const express = require('express');
-// const cors = require('cors');
 
 require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
 
-// app.use(cors());
 app.use(express.json());
 app.get('/', (req, res) => res.send('Express on Vercel'));
-
-//routes
-// app.use('/product', require('./routes/productGetter.routes'));
-// app.use('/product', require('./routes/productSetter.routes'));
-// app.use('/user', require('./routes/user.routes'));
 
 const connectDB = async () => {
   try {
