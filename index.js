@@ -12,15 +12,15 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
 //routes
-app.use('/expense', require('./routes/expenseGetter.routes'));
-app.use('/expense', require('./routes/expenseSetter.routes'));
+app.use('/expenses', require('./routes/expenseGetter.routes'));
+app.use('/expenses', require('./routes/expenseSetter.routes'));
 // app.use('/user', require('./routes/user.routes'));
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_DB_URI);
+    await mongoose.connect(process.env.MONGO_DB_URI, { dbName: 'Expensifly' });
 
-    console.log('Database connected');
+    console.log('Database connected, current database-');
   } catch (err) {
     console.log('Error:', err.message);
   }
