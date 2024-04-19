@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const { createExpense } = require('../controllers/createExpense');
+//isiimportinam reikalingus elementus is elementu
+const { createExpense } = require('../controllers');
+// const verifyJWT = require('../middleware/verifyJWT');
 
 const router = Router();
-
-//GET /Expenses/:id dvitaskis reiskia kad id yra kintama reiksme, jei butu tiesiog id tai ir nueitu i /id kelia
 
 //POST /product
 //sitoj vietoj sukuriamas/gaunamas kelias, siuo atveju po adreso ten https:/.../

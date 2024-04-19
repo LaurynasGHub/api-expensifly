@@ -12,8 +12,8 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
 //routes
-// app.use('/product', require('./routes/productGetter.routes'));
-app.use('/product', require('./routes/expenseSetter.routes'));
+app.use('/expense', require('./routes/expenseGetter.routes'));
+app.use('/expense', require('./routes/expenseSetter.routes'));
 // app.use('/user', require('./routes/user.routes'));
 
 const connectDB = async () => {
