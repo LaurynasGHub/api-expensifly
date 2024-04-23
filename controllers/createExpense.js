@@ -7,9 +7,9 @@ const { default: mongoose } = require('mongoose');
 
 //POST/expense
 async function createExpense(props) {
-  console.log('--Create expense--');
-  console.log('props:');
-  console.log(props);
+  // console.log('--Create expense--');
+  // console.log('props:');
+  // console.log(props);
 
   expenseModelValidation(props);
 
