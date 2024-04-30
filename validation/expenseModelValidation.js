@@ -14,8 +14,6 @@ function expenseModelValidation(props) {
     'December',
   ];
 
-  const daysOfMonth = Array.from({ length: 31 }, (_, index) => index + 1);
-
   //title validation
   if (!props?.title?.trim()) {
     throw new Error('Title is required');
@@ -32,10 +30,7 @@ function expenseModelValidation(props) {
   if (props.year <= 0 || props.year === null) {
     throw new Error('Year provided is invalid');
   }
-  //day of the month validation
-  if (props.day <= 0 || !daysOfMonth.includes(props.day)) {
-    throw new Error('Day provided is invalid');
-  }
+
   //shop validation
   if (!props?.shop?.trim()) {
     throw new Error('Shop is required');

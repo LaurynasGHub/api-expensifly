@@ -3,7 +3,7 @@ const { getAllExpenses } = require('../controllers');
 
 const router = Router();
 
-//GET /product
+//GET /expenses
 router.get('/', async (req, res) => {
   try {
     const data = await getAllExpenses();

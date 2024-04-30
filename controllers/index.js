@@ -1,5 +1,7 @@
+// const removeExpense = require('./removeExpense.js');
+
 module.exports = {
   createExpense: require('./createExpense'),
-  getExpenseById: require('./getExpenseById'),
   getAllExpenses: require('./getAllExpenses.js'),
+  removeExpense: require('./removeExpense.js'),
 };
