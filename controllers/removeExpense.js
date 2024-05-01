@@ -7,12 +7,6 @@ const { default: mongoose } = require('mongoose');
 
 //POST/expense
 async function removeExpense(id) {
-  // console.log('--Create expense--');
-  // console.log('props:');
-  // console.log(props);
-
-  //   expenseModelValidation(props);
-
   const response = await Expense.findByIdAndDelete(id);
 
   return response;
