@@ -30,7 +30,10 @@ function expenseModelValidation(props) {
   if (props.year <= 0 || props.year === null) {
     throw new Error('Year provided is invalid');
   }
-
+  //day validation
+  if (props.day <= 0) {
+    throw new Error('Day provided is invalid');
+  }
   //shop validation
   if (!props?.shop?.trim()) {
     throw new Error('Shop is required');
