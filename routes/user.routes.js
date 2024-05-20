@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
 });
 
 // POST /user/login
+
 router.post('/login', async (req, res) => {
   try {
     const data = await logInUser(req.body);

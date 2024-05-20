@@ -8,9 +8,9 @@ const {
 async function registerUser(user) {
   registerUserValidation(user);
 
-  const userExists = await User.find();
+  const userExists = await User.findOne({ username: user.username });
 
-  if (userExists?.length) throw new Error('user already exists');
+  if (userExists) throw new Error('user already exists');
 
   const hashedPwd = await bcrypt.hash(user.password, 10);
 
