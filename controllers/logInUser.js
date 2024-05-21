@@ -19,6 +19,8 @@ async function logInUser({ username, password }) {
     expiresIn: '2s',
   });
 
+  console.log('logged in');
+
   //grazinam objekta del to skliaustai
   return { token };
 }
