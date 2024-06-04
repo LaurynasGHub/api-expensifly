@@ -10,6 +10,7 @@ const expenseSchema = new mongoose.Schema({
   month: { type: String, required: true, unique: false },
   day: { type: Number, required: true, unique: false },
   shop: { type: String, required: true, unique: false },
+  userId: { type: String, required: true, unique: false },
 });
 
 const Expense = mongoose.model('Expense', expenseSchema);

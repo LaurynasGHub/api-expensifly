@@ -21,8 +21,9 @@ async function logInUser({ username, password }) {
 
   //console.log('logged in');
 
-  //grazinam objekta del to skliaustai
-  return { token };
+  //grazinam userId arba token
+  return findUser._id;
+  // return { token };
 }
 
 module.exports = logInUser;
