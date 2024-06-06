@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  console.log(req.params);
+  // console.log(req.params);
   try {
     const data = await removeExpense(req.params.id);
     res.send(data);
